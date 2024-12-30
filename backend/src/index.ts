@@ -1,8 +1,11 @@
 import express, { Request, Response } from 'express';
+import dotenv from 'dotenv';
 import {z} from "zod";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken";
 import { UserModel } from './db';
+
+dotenv.config();
 
 const app = express();
 app.use(express.json())
@@ -17,7 +20,7 @@ type SignupInput = z.infer<typeof signupSchema>;
 
 app.post("/api/v1/signup",async(req: Request, res: Response<any>): Promise<any> => {
     try {
-        // Validate the input data using the Zod schema
+        //  Zod schema validation
         const parsed = signupSchema.safeParse(req.body);
         if (!parsed.success) {
             return res.status(400).json({
@@ -28,7 +31,7 @@ app.post("/api/v1/signup",async(req: Request, res: Response<any>): Promise<any> 
 
         const { username, email, password }: SignupInput = parsed.data;
 
-        // Check if a user with the same username already exists
+        // user with the same username 
         const existingUser = await UserModel.findOne({ username });
         if (existingUser) {
             return res.status(409).json({
@@ -36,10 +39,10 @@ app.post("/api/v1/signup",async(req: Request, res: Response<any>): Promise<any> 
             });
         }
 
-        // Hash the password for secure storage
+        // Hash  password 
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Create a new user in the database
+        // new user in database
         await UserModel.create({
             username,
             email,
@@ -52,15 +55,46 @@ app.post("/api/v1/signup",async(req: Request, res: Response<any>): Promise<any> 
     } catch (error) {
         console.error("Error during signup:", error);
 
-        // Handle unexpected server errors
+        // server errors
         return res.status(500).json({
             message: "Internal server error"
         });
     }
 });
 
-app.post("/api/v1/signin", (req, res) => {
-    
+app.post("/api/v1/signin",async (req:Request , res:Response<any>): Promise<any> => {
+    try{
+        const{ username, password } = req.body;
+
+        const existingUser = await UserModel.findOne({username});
+        if(!existingUser) {
+            return res.status(400).json({
+                message: "User not found",
+            });
+        }
+
+        const isPasswordValid = await bcrypt.compare(password, existingUser.password);
+        if(!isPasswordValid){
+            return res.status(401).json({
+                message: "invalid credentials"
+            })
+        }
+        const token = jwt.sign(
+            {id: existingUser.id},
+            process.env.JWT_SECRET as string,
+            {expiresIn: "24h"}
+        );
+
+        return res.status(200).json({
+            message: "sign-in successful",
+            token,
+        });
+    }catch(error){
+        console.error("Error during sign-in: ", error);
+        return res.status(500).json({
+            message: "Internal server error"
+        })
+    }
 })
 
 app.post("/api/v1/content", (req, res) => {
