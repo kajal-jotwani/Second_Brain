@@ -1,9 +1,10 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import {z} from "zod";
+import {promise, z} from "zod";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken";
-import { UserModel } from './db';
+import { Contentmodel, UserModel } from './db';
+import { userMiddleware } from "./middleware";
 
 dotenv.config();
 
@@ -97,8 +98,18 @@ app.post("/api/v1/signin",async (req:Request , res:Response<any>): Promise<any> 
     }
 })
 
-app.post("/api/v1/content", (req, res) => {
-    
+app.post("/api/v1/content",userMiddleware, async (req: Request, res: Response) => {
+    const link = req.body.link;
+    const type = req.body.type;
+    Contentmodel.create({
+        link,
+        type,
+        userId: req.userId,
+        tags: []
+    })
+     res.json({
+        message: "Content added"
+    })
 })
 
 app.get("/api/v1/content", (req, res) => {
