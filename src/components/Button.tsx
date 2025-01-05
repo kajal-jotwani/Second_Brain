@@ -18,7 +18,7 @@ const sizeStyles = {
     "lg": "py-3 px-6"
 }
 
-const defaultStyles = "rounded-md p-4"
+const defaultStyles = "rounded-md p-4 flex items-center justify-center"
 
 export const Button = (props: ButtonProps) => {
     return <button className={`${variantStyles[props.variant]} ${defaultStyles} ${sizeStyles[props.size]}`}>
