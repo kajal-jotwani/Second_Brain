@@ -3,8 +3,9 @@ import dotenv from 'dotenv';
 import {promise, z} from "zod";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken";
-import { Contentmodel, UserModel } from './db';
+import { Contentmodel, LinkModel, UserModel } from './db';
 import { userMiddleware } from "./middleware";
+import { random } from './utils';
 
 dotenv.config();
 
@@ -134,8 +135,21 @@ app.delete("/api/v1/content", userMiddleware, async (req, res) => {
     })
 })
 
-app.post("/api/v1/brain/share", (req, res) => {
-    
+app.post("/api/v1/brain/share",userMiddleware, async (req, res) => {
+    const share = req.body.share;
+    if(share){
+        await LinkModel.create({
+           userId: req.userId,
+           hash: random(10)
+        })
+    }else{
+        await LinkModel.deleteOne({
+            userId: req.userId
+        });
+    }
+    res.json({
+        message: "updated sharable link"
+    })
 })
 
 app.post("/api/v1/brain/:shareLink", (req, res) => {
