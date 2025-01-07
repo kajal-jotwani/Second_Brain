@@ -1,4 +1,5 @@
 import mongoose, { model, Schema} from "mongoose";
+import { string } from "zod";
 
 mongoose.connect("mongodb://localhost:27017/Brainly")
 
@@ -18,3 +19,12 @@ const ContentSchema = new Schema({
 })
 
 export const Contentmodel = model("Content", ContentSchema);
+
+const LinkSchema = new Schema({
+    // a unique string which is generated for the user
+    hash: String,
+    // the type is userid but it refers to the user table
+    userId: {type: mongoose.Types.ObjectId, ref:'User', require, unique: true}
+})
+
+export const LinkModel = model("Links", LinkSchema);
