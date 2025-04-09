@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# 🧠 Second Brain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Second Brain** — a personal knowledge management system inspired by the idea of building a digital extension of your memory.
 
-Currently, two official plugins are available:
+> ⚠️ This is a **learning project** where I’m exploring full-stack development and digital productivity tools.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![alt text](image.png)
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 📒 Capture and organize notes, thoughts, and resources  
+- 🔍 Search and tag system for easy retrieval  
+- 🗂️ Categorize information by topic or project  
+- 💡 Aims to replicate a digital "brain" for learning, reflection, and productivity
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React / Preact (Frontend)  
+- Node.js / Express (Backend)  
+- MongoDB (Database)  
+- Markdown support (for note formatting)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📚 Purpose
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project is part of my personal learning journey. I’m using it to:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Practice full-stack development  
+- Learn about personal knowledge management systems  
+- Explore UX design for productivity tools
+
+## 🏗️ Status
+
+🛠️ **Under development** — features may change as I learn and improve the app.
+
+## 📬 Feedback
+
+Got suggestions or ideas? Feel free to share them! I'm always looking to grow and improve.
+
+---
+
+Made with 💻 and ☕ by kajal jotwani
