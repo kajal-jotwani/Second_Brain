@@ -1,0 +1,25 @@
+{
+  "projectName": "Second_Brain",
+  "projectOwner": "kajal-jotwani",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "kajal-jotwani",
+      "name": "Kajal Jotwani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130732790?v=4",
+      "profile": "https://kajal-jotwani-portfolio.vercel.app/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "linkToUsage": true
+}
