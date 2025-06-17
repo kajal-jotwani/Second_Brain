@@ -1,6 +1,7 @@
 # 🧠 Second Brain
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Welcome to **Second Brain** — a personal knowledge management system inspired by the idea of building a digital extension of your memory.
@@ -11,24 +12,24 @@ Welcome to **Second Brain** — a personal knowledge management system inspired 
 
 ## 🚀 Features
 
-- 📒 Capture and organize notes, thoughts, and resources  
-- 🔍 Search and tag system for easy retrieval  
-- 🗂️ Categorize information by topic or project  
+- 📒 Capture and organize notes, thoughts, and resources
+- 🔍 Search and tag system for easy retrieval
+- 🗂️ Categorize information by topic or project
 - 💡 Aims to replicate a digital "brain" for learning, reflection, and productivity
 
 ## 🛠 Tech Stack
 
-- React / Preact (Frontend)  
-- Node.js / Express (Backend)  
-- MongoDB (Database)  
+- React / Preact (Frontend)
+- Node.js / Express (Backend)
+- MongoDB (Database)
 - Markdown support (for note formatting)
 
 ## 📚 Purpose
 
 This project is part of my personal learning journey. I’m using it to:
 
-- Practice full-stack development  
-- Learn about personal knowledge management systems  
+- Practice full-stack development
+- Learn about personal knowledge management systems
 - Explore UX design for productivity tools
 
 ## 🏗️ Status
@@ -54,8 +55,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://kajal-jotwani-portfolio.vercel.app/"><img src="https://avatars.githubusercontent.com/u/130732790?v=4?s=80" width="80px;" alt="Kajal Jotwani"/><br /><sub><b>Kajal Jotwani</b></sub></a><br /><a href="https://github.com/kajal-jotwani/Second_Brain/commits?author=kajal-jotwani" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://yashikajotwani12.github.io/yashikajotwani/"><img src="https://avatars.githubusercontent.com/u/77020164?v=4?s=80" width="80px;" alt="Yashika Jotwani"/><br /><sub><b>Yashika Jotwani</b></sub></a><br /><a href="https://github.com/kajal-jotwani/Second_Brain/commits?author=yashikajotwani12" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/oyetanishq"><img src="https://avatars.githubusercontent.com/u/76192403?v=4?s=80" width="80px;" alt="Tanishq Singh"/><br /><sub><b>Tanishq Singh</b></sub></a><br /><a href="https://github.com/kajal-jotwani/Second_Brain/commits?author=oyetanishq" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
