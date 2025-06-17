@@ -1,6 +1,6 @@
 # 🧠 Second Brain
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Welcome to **Second Brain** — a personal knowledge management system inspired by the idea of building a digital extension of your memory.
@@ -54,6 +54,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://kajal-jotwani-portfolio.vercel.app/"><img src="https://avatars.githubusercontent.com/u/130732790?v=4?s=100" width="100px;" alt="Kajal Jotwani"/><br /><sub><b>Kajal Jotwani</b></sub></a><br /><a href="https://github.com/kajal-jotwani/Second_Brain/commits?author=kajal-jotwani" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://yashikajotwani12.github.io/yashikajotwani/"><img src="https://avatars.githubusercontent.com/u/77020164?v=4?s=100" width="100px;" alt="Yashika Jotwani"/><br /><sub><b>Yashika Jotwani</b></sub></a><br /><a href="https://github.com/kajal-jotwani/Second_Brain/commits?author=yashikajotwani12" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
