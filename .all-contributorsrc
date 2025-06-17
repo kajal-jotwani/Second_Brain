@@ -6,9 +6,8 @@
   "files": [
     "README.md"
   ],
-  "imageSize": 100,
+  "imageSize": 80,
   "commit": true,
-  "commitConvention": "angular",
   "contributors": [
     {
       "login": "kajal-jotwani",
@@ -30,5 +29,6 @@
     }
   ],
   "contributorsPerLine": 7,
-  "linkToUsage": true
+  "linkToUsage": true,
+  "commitConvention": "angular"
 }
