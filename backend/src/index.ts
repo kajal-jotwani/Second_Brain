@@ -27,7 +27,7 @@ app.post("/api/v1/signup",async(req: Request, res: Response<any>): Promise<any> 
         if (!parsed.success) {
             return res.status(400).json({
                 message: "Invalid input data",
-                errors: parsed.error.errors
+                errors: parsed.error.issues
             });
         }
 
